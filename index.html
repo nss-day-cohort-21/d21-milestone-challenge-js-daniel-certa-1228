@@ -3,32 +3,33 @@
 	<head>
 		<title>Tree</title>
 		<meta charset="utf-8">
-
+		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
-		<h1>Tree</h1>
-		<form>
+		<div class="main-content">
+			<h1>Tree</h1>
+			<form>
 
-			<div class="form-structure">
-				<label for="tree_number">Height of Tree:</label>
-				<input type="number" name="tree_number" id="tree_number">
-			</div>
-			<br>
-			<div class="form-structure">
-				<label for="tree_character">Character of Tree:</label>
-				<input type="text" name="tree_character" id="tree_character" maxlength="1">
-			</div>
-			<br>
-			<div class="form-structure">
-				<button id="grow-btn">Grow Your Tree!</button>
-			</div>
-			<br>
-			<div class="form-structure">
-				<button type="reset" id="reset-btn">Reset Fields</button>
-			</div>			
+				<div class="form-structure">
+					<label for="tree_number">Height of Tree:</label>
+					<input type="number" name="tree_number" id="tree_number" min='1'>
+				</div>
+				<br>
+				<div class="form-structure">
+					<label for="tree_character">Character of Tree:</label>
+					<input type="text" name="tree_character" id="tree_character" maxlength="1">
+				</div>
+				<br>
+				<div class="form-structure">
+					<button id="grow-btn">Grow Your Tree!</button>
+				</div>
+				<br>
+				<div class="form-structure">
+					<button type="reset" id="reset-btn">Reset Fields</button>
+				</div>			
 
-		</form>
-
+			</form>
+		</div>
 
 		<script type="text/javascript" src="main.js"></script>
 	</body>
