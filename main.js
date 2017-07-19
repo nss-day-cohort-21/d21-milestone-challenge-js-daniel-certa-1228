@@ -60,7 +60,7 @@ function tree(specs) {
 				treeBranch += character;
 				//cat space + our branch defined above
 				treeSentence = space + treeBranch
-				//log that festive shit as treeSentence
+				//log that festive sh!t as treeSentence
 				console.log( treeSentence ); //THIS HERE IS THE MONEY!!
 				//add a single character to the branch
 				treeBranch += character;
@@ -73,10 +73,32 @@ function tree(specs) {
 let growButton = document.getElementById('grow-btn');
 //event handler to make grow button work
 growButton.addEventListener("click", function(click){
+	//prevent submitting the form
 	click.preventDefault();
+	//fill the tree object
 	let treeSpecs = fillTreeObject();
+	//call the function
 	tree(treeSpecs);
 });
+//define function to add functionality to return key
+function addEventToReturn(element) {
+	element.addEventListener("keypress", function(event) {
+    if (event.keyCode == 13) {
+        document.getElementById("grow-btn").click();
+    	}
+	});
+}
+//get the field
+let treeNumField = document.getElementById("tree_number");
+//call function to add the return key functionality
+addEventToReturn(treeNumField);
+
+//get the field
+let treeCharField = document.getElementById("tree_character");
+//call the function to add return key functionality
+addEventToReturn(treeCharField);
+
+//////////////////////////////////////////////////////////////////////////////////////
 // Create a tree function that should build a pine tree out of a character in the Chrome dev tools console.
 // It accepts a single object as an argument. The object should have two key/value pairs.
 
